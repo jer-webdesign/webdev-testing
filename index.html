@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jer3dfx Artist's Essentials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Milonga&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- 
+        Created on Fri Jun 21, 2024
+        
+        Prepared by: Jeremy    
+    
+        About this page:
+        This HTML gives you important tips as an artist. It has sections about different 
+        art supplies like surfaces, brushes, and colors. Each section shows why picking 
+        the right materials is crucial. The surface you paint on, like canvas, affects 
+        how your painting looks. Different brush shapes and sizes help you create various
+        styles, and using colors can express emotions and tell stories in your art.
+        
+        Revision Table:
+        +------------------+----------------------------------------------------------+
+        |  Date            |    Changes                                               |
+        +------------------+----------------------------------------------------------+
+        | June 24, 2024    | Applied CSS for body, header tags, change tables to use  |
+        |                  | the grid element layouts and flexboxes for images and    |
+        |                  | text captions and descriptions.                          |
+        |                  | Added JavaScript for hamburger menu as a "Bonus".        | 
+        | June 25, 2024    | Added <section> tag to separate the "Artist's Tips" from |
+        | June 23, 2024    | Added "Artist's Tips" using the ordered list tag.        |
+        |                  | Also added a footer tag and completed all required tags  | 
+        |                  | from "Lab: Using HTML with Version Control."             |
+        |                  | Modified the layout for the nav menu and centered the    |
+        |                  | logo along with main and sub-titles.                     |          
+        |                  | the clickable images.                                    |          
+        | June 21, 2024    | Created an HTML file and added <head> and <body> tags    |                  
+        |                  | including a <nav> tag with a <table> tag for menu options|
+        |                  | (HOME, ART SUPPLIES, TUTORIALS, ABOUT, and CONTACT).     |
+        |                  | Added a logo, main and sub-titles, and images for        | 
+        |                  | SURFACE, BRUSH, and COLOR with clickable links and       |  
+        |                  | descriptive information using table and unordered list   |
+        |                  | tags.                                                    |
+        +------------------+----------------------------------------------------------+    
+        
+        FEEDBACKS:
+        
+        Peer sessions:        
+        1) They mentioned that it is well organized and liked my homepage.
+        2) They asked me how I managed to display the images in a horizontal manner. 
+           I told them I used the <table> tag.
+        3) One comment was that when modifying the browser, the images do not auto-adjust
+           their sizes. This is reasonable because CSS hasn't been applied yet.
+        
+        Instructor sessions:        
+        1) Positive feedback from instructor Britt.
+        2) She suggested including the changes made in the HTML code in the Comment Section.
+        
+        Test Results:        
+        1) Issue: The NAV Menu options are not centered, and the logo with the main subtitles.
+           Solution: Modify this by changing align="center" to the <h1> tag for the logo and 
+                     "ARTIST'S ESSENTIALS".
+        
+        2) Issue: The descriptive texts for each image ("SURFACE", "BRUSHES", and "COLOR") 
+                  are not aligned properly.
+           Solution: Insert an unordered list inside the <table> tag for each image and change 
+                  align="center" to align="left" for the descriptive texts.
+    -->
+    
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change Colors</title>
+        <style>
+            body {
+                background-color: white;
+                color: black;
+                transition: all 0.5s ease;
+            }
+            .dark-mode {
+                background-color: black;
+                color: white;
+            }
+            button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello, World!</h1>
+        <p>This is a paragraph that will change color.</p>
+        <button id="colorToggleBtn">Toggle Dark Mode</button>
+    
+        <script>
+            const toggleButton = document.getElementById('colorToggleBtn');
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
+    </body>
+    </html>
+    
+    <header class="flexbox-navbar">
+      <div class="flexbox-brand">  
+        <img src="images/logo.jpg" alt="Logo">
+        <h1 class="heading1">Artist's<br>Essentials</h1> 
+      </div> 
+      <nav class="flexbox-nav-links" >
+        <a href="#" class="home-link"><b>Home</b></></a>
+        <a href="#" class="art-supplies-link"><b>Art Supplies</b></font></a>
+        <a href="#" class="tutorials-link"><b>Tutorials</b></font></a>
+        <a href="#" class="about-link"><b>About</b></font></a>
+        <a href="#" class="contact-link"><b>Contact</b></font></a>  
+        <div class="flexbox-burger" id="flexbox-burger">
+          <div class="bar"></div> 
+          <div class="bar"></div>
+          <div class="bar"></div>   
+        </div>   
+        <div class="burger-menu" id="burgerMenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Art Supplies</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>       
+      </nav>
+    </header>
+    <h2 id="heading2" align="center">
+      "Unleashing creativity with every stroke, turning lines and colors
+        into a piece of art."
+    </h2> 
+
+    <div class="flexbox-page-container">
+      <div class="grid-container">
+        <div class="flexbox-item">
+          <a href="#"><img src="images/surface.jpg" alt="surface"></a>
+          <h2 class="grid-item-text">SURFACE</h2> 
+          <p>The<span style="font-style: italic"><strong> surface</strong></span> artists use, like canvas, can change 
+            how their paintings look.</p>                        
+        </div>
+        <div class="flexbox-item">
+          <a href="#"><img src="images/assorted_brushes.jpg" alt="assorted brushes"></a>
+          <h2 class="grid-item-text">BRUSHES</h2>  
+          <p>Artist <span style="font-style: italic"><strong> brushes</strong></span> have different shapes and sizes for 
+            various painting styles.</p>             
+        </div>
+        <div class="flexbox-item">
+          <a href="#"><img src="images/color.jpg" alt="color"></a>
+          <h2 class="grid-item-text">COLOR   </h2>
+          <p><span style="font-style: italic">In art,<strong> colors</strong></span> communicates feelings and stories with bright 
+            and soft shades, helping viewers connect with the artwork.</p>            
+        </div>
+        <div class="flexbox-item paragraph">
+            <p><strong>Artist's Tips:</strong><br> Whether canvas or textured paper, the surface you paint on affects how your artwork looks.
+            Experiment to find one that enhances the textures and visual effects you want.</p> 
+        </div>
+        <div class="flexbox-item paragraph">
+            <p><br>Try various brush shapes and sizes to create detailed and expressive art that matches your style. 
+            The right brush can bring out emotions and add depth to your work.</p>         
+        </div>   
+        <div class="flexbox-item paragraph">
+            <p><br>Color is more than decoration, it tells stories and evokes feelings.
+              Play with vibrant tones and subtle shades to engage viewers and give your artwork meaning and impact.</p>
+        </div>
+        <div></div><div></div>               
+        <div class="flexbox-item footer">
+          <footer>
+            <p><br><br>Copyright &copy; 2024 Jer3dfx Artist's Essentials. All rights reserved.
+              <br>Contact me at <a href="mailto:jer3dfx@gmail.com">jer3dfx@gmail.com</a>
+            </p>
+          </footer> 
+        </div>        
+      </div>
+    </div>
+
+    <script>
+      const burger = document.getElementById('flexbox-burger');
+      const burgerMenu = document.getElementById('burgerMenu');
+  
+      burger.onclick = function(event) {
+      event.stopPropagation(); // Prevent event from bubbling up to the document
+      burgerMenu.classList.toggle('active');
+      }
+  
+      document.addEventListener('click', function(event) {
+        if (!burger.contains(event.target) && !burgerMenu.contains(event.target)) {
+          burgerMenu.classList.remove('active');
+        }
+      });
+    </script> 
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ('WebSocket' in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+          var address = protocol + window.location.host + window.location.pathname + '/ws';
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == 'reload') window.location.reload();
+            else if (msg.data == 'refreshcss') refreshCSS();
+          };
+          if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+            console.log('Live reload enabled.');
+            sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+          }
+        })();
+      }
+      else {
+        console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+      }
+      // ]]>
+    </script>  
+  </body>
+</html>

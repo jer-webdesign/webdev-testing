@@ -1,0 +1,337 @@
+/* 
+Created on Fri Jun 24, 2024
+
+Prepared by: Jeremy    
+
+Rationale:
+The homepage for "Artist's Essentials" is designed to catch visitors' attention with 
+a strong visual look. Using bright colors, the design aims to make people feel something 
+and notice the site, which is important for an artist's page. Key design rules like balance, 
+contrast, and emphasis are used to make a good first impression. Images of artist tools like 
+brushes and paint clearly represent the site's focus.
+
+Comments:
+Added CSS styles for the following:
+1) Change the body tag's white color to a black background color to show more contrast on the text and images.
+2) Added red color for the logo's previous black and white to give vibrant color.
+3) Added accent color on the heading 2 to give emphasis on the message.
+4) Flexbox is used for the header main menu, which includes the logo, "Artist's Essentials", 
+   "Home", "Art Supplies", "Tutorials", "About", "Contact", and the hamburger menu.
+5) A grid layout is used for "Surface", "Brushes", and "Color" images, with flexbox inside each 
+   grid item. The grid is also used for caption text items, and flexbox is used for short descriptions. 
+   Additionally, the "Artist's Tips" information is included.
+6) Google fonts are used: the "Molinga" font family for heading 1 and "Roboto Flex" for heading 2.
+7) The main menu items ("Home", "Art Supplies", "Tutorials", "About", "Contact", and the hamburger menu) 
+   and images ("Surface", "Brushes", and "Color") have hover mouse white glow effects.
+8) Added JavaScript for hamburger menu as a "Bonus" from the HTML "index.html" file.   
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.flexbox-navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black; 
+  color: white;
+  border-bottom: 1px solid white;
+  z-index: 1000; /* Ensures the menu bar stays on top of other content */
+}
+
+.flexbox-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the logo and the heading */
+}
+
+.flexbox-brand img {
+  height: 150px; /* Adjust height as needed */
+  opacity: 100%;
+  transition: opacity 230ms ease-in-out;   
+}
+
+.flexbox-brand img:hover {
+  opacity: 50%;
+}
+
+.heading1{
+  margin: 0;
+  color: white;
+  font-family: "Milonga", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 65px;
+  line-height: 65px;
+}
+
+.highlight {
+  display: block;
+  color: white; 
+}
+
+#heading2{
+  color: #f8bb86; 
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.flexbox-nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;  
+}
+.flexbox-nav-links a {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none; 
+  color: white; 
+  padding: 5px 10px;
+  border: 2px solid transparent; 
+  border-radius: 10px; 
+}  
+
+.flexbox-nav-links a:hover {
+  border: 2px solid white; /* Add a border */
+  background-color: white; /* Fill the rectangle with white */
+  color: black; /* Change text color to black */ 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4); 
+}
+
+.home-link {
+  display: inline-block;  
+  text-decoration: none;
+  color: white; 
+  padding: 5px 10px; 
+  border: 2px solid transparent;
+  border-radius: 10px; 
+}
+
+.home-link:hover {
+  border: 2px solid black; 
+  background-color: white; 
+  color: black; 
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.art-supplies-link {
+  display: inline-block;   
+  text-decoration: none;
+  color: white; 
+  padding: 5px 10px; 
+  border: 2px solid transparent; 
+  border-radius: 10px; 
+}
+
+.art-supplies-link:hover {
+  border: 2px solid black; 
+  background-color: white; 
+  color: black; 
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.tutorials-link {
+  display: inline-block; 
+  text-decoration: none; 
+  color: white; 
+  padding: 5px 10px; 
+  border: 2px solid transparent; 
+  border-radius: 10px; 
+}
+
+.tutorials-link:hover {
+  border: 2px solid black; 
+  background-color: white; 
+  color: black; /
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.about-link {
+  display: inline-block;   
+  text-decoration: none; 
+  color: white; 
+  padding: 5px 10px; 
+  border: 2px solid transparent; 
+  border-radius: 10px; 
+}
+
+.about-link:hover {
+  border: 2px solid black; 
+  background-color: white; 
+  color: black; 
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.4); 
+}
+
+.contact-link {
+  display: inline-block;   
+  text-decoration: none; 
+  color: white; 
+  padding: 5px 10px; 
+  border: 2px solid transparent; 
+  border-radius: 10px; 
+}
+
+.contact-link:hover {
+  border: 2px solid white; 
+  background-color: white; 
+  color: black; 
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.flexbox-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  cursor: pointer;
+  z-index: 1000;
+  background-color: black 
+}
+.flexbox-burger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 5px;
+  transition: 0.3s;
+}
+
+.flexbox-burger:hover .bar {
+  background-color: red;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6), 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  top: 60px; 
+  right: 20px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000; 
+  width: 200px; 
+}
+.burger-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.burger-menu li {
+  margin: 10px 0;
+}
+.burger-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.burger-menu a:hover {
+  color: black; 
+  
+}
+.burger-menu.active {
+  display: block;
+}
+
+@media (max-width: 1150px) {
+  .flexbox-nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black; 
+    align-items: flex-end; 
+    padding: 20px; 
+    box-sizing: border-box; 
+  }
+  .flexbox-nav-links.active {
+    display: flex;
+  }
+  .flexbox-burger {
+    display: flex;
+  }
+}
+
+.flexbox-page-container {
+  display: flex;
+  justify-content: center; 
+  align-items: baseline; 
+  height: 45vh; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 1px; /
+}
+
+.flexbox-item {
+  display: flex; 
+  flex-direction: column;
+  align-items: left;
+  color: white;  
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.flexbox-item img {
+  max-width: 90%; 
+  height: auto;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.flexbox-item img:hover {
+  max-width: 90%; 
+  height: auto; 
+  border: 3px solid white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.grid-item-text {
+  background-color: black;
+  color: #f8bb86;
+  margin: 5px;
+  border: 5px;
+  padding: 10px;
+  display: grid;
+  white-space: pre;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 4px; 
+  max-width: 500px;
+}
+
+.paragraph {
+  margin: 5px;
+  border: 5px;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  background-color: black;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.footer {
+  margin-top: 30px;
+  margin-right: 30px;
+  color: white;
+  text-align: right;
+  font-size: 14px;
+}
+
+a {
+  color: lightblue;
+  text-decoration: none;
+}
